@@ -28,40 +28,16 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentItem = 0;
 
     function showNextItem() {
-        // Remueve la clase 'active' del ítem actual
+
         carouselItems[currentItem].classList.remove('active');
 
-        // Calcula el siguiente ítem
+
         currentItem = (currentItem + 1) % carouselItems.length;
 
-        // Agrega la clase 'active' al siguiente ítem
+        
         carouselItems[currentItem].classList.add('active');
     }
 
-    setInterval(showNextItem, 5000); // 5000ms = 5 segundos
+    setInterval(showNextItem, 5000); // 5 segundos
 
 });
-/*
-document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.getElementById('navbar');
-    const scrollThreshold = 50;
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > scrollThreshold) {
-            navbar.classList.add('bg-black');
-        } else {
-            navbar.classList.remove('bg-black');
-        }
-    });
-
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    let currentItem = 0;
-
-    function showNextItem() {
-        carouselItems[currentItem].classList.add('hidden');
-        currentItem = (currentItem + 1) % carouselItems.length;
-        carouselItems[currentItem].classList.remove('hidden');
-    }
-
-    setInterval(showNextItem, 5000);
-});*/
