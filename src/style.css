@@ -78,3 +78,17 @@ textarea {
     resize: none;
     height: 100px;
 }
+
+.carousel-item {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    animation: zoomOut 6s infinite alternate;
+    transition: opacity 1s ease-in-out;
+    opacity: 0; 
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
