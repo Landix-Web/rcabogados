@@ -73,3 +73,8 @@
     width: auto;
     margin-right: 10px; 
 }
+
+textarea {
+    resize: none;
+    height: 100px;
+}
