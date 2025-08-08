@@ -14,9 +14,10 @@
         <div class="container mx-auto flex items-center justify-between px-4 md:px-8">
             <div class="text-xl font-semibold text-gray-800"><img src="src/img/logo_horizontal.png" alt="" class="h-24 w-auto"></div>
             <div class="hidden md:flex space-x-6">
-                <a href="#inicio" class="text-white hover:text-gold transition-colors duration-300">Inicio</a>
-                <a href="#nosotros" class="text-white hover:text-gold  transition-colors duration-300">Servicios</a>
-                <a href="#contacto" class="text-gray-600 hover:text-gold  transition-colors duration-300">Contacto</a>
+                <a href="#inicio" class="text hover:text-gold transition-colors duration-300 relative nav-link">Inicio</a>
+                <a href="#areapractica" class="text hover:text-gold transition-colors duration-300 relative nav-link">Áreas de práctica</a>
+                <a href="#nosotros" class="text hover:text-gold transition-colors duration-300 relative nav-link">Servicios</a>
+                <a href="#contacto" class="text hover:text-gold transition-colors duration-300 relative nav-link">Contacto</a>
             </div>
             <div class="md:hidden">
                 <button id="menu-toggle" class="text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400">
@@ -29,9 +30,10 @@
         </div>
         <div id="mobile-menu" class="hidden bg-black shadow-md absolute top-full left-0 w-full z-40">
             <div class="py-4 px-4 flex flex-col space-y-3">
-                <a href="#inicio" class="text-white hover:text-gray-800 transition-colors duration-300 block">Inicio</a>
-                <a href="#nosotros" class="text-white hover:text-gray-800 transition-colors duration-300 block">Servicios</a>
-                <a href="#contacto" class="text-white hover:text-gray-800 transition-colors duration-300 block">Contacto</a>
+                <a href="#inicio" class="text hover:text-gray-800 transition-colors duration-300 block">Inicio</a>
+                <a href="#areapractica" class="text hover:text-gray-800 transition-colors duration-300 block">Áreas de práctica</a>
+                <a href="#servicios" class="text hover:text-gray-800 transition-colors duration-300 block">Servicios</a>
+                <a href="#contacto" class="text hover:text-gray-800 transition-colors duration-300 block">Contacto</a>
             </div>
         </div>
     </nav>
@@ -46,11 +48,55 @@
             <div class="carousel-item bg-hero-1 w-full h-full active"></div>
             <div class="carousel-item bg-hero-2 w-full h-full"></div>
             <div class="carousel-item bg-hero-3 w-full h-full"></div>
+            <div class="carousel-item bg-hero-4 w-full h-full"></div>
+            <div class="carousel-item bg-hero-5 w-full h-full"></div>
         </div>
         <div class="container mx-auto text-center relative z-10 text-white flex flex-col items-center justify-center h-full">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">...</h1>
             <p class="text-lg md:text-xl mb-8">...</p>
             <a href="#contacto" class="bg-black hover:bg-white text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">Contáctanos</a>
+        </div>
+    </section>
+
+
+    <section id="areas-practica" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl font-semibold text-center text-gray-800 mb-12">Áreas de Práctica</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="flex items-center justify-center w-16 h-16 bg-black text-white rounded-full mb-4 mx-auto">
+                        <img src="src/img/justice.png" alt="" class="w-3/5 h-3/5">
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Apoyo al Litigio</h3>
+                    <p class="text-gray-600 text-center">Ofrecemos servicios de apoyo y asesoría durante todo el proceso de litigio para garantizar el mejor resultado posible.</p>
+                </div>
+    
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="flex items-center justify-center w-16 h-16 bg-black text-white rounded-full mb-4 mx-auto">
+                        <img src="src/img/compensation.png" alt="" class="w-3/5 h-3/5">
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Daños Personales</h3>
+                    <p class="text-gray-600 text-center">Protegemos los derechos de nuestros clientes en casos de daños personales, buscando la compensación justa.</p>
+                </div>
+    
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="flex items-center justify-center w-16 h-16 bg-black text-white rounded-full mb-4 mx-auto">
+                        <img src="src/img/inv.png" alt="" class="w-3/5 h-3/5">
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Investigación Legal</h3>
+                    <p class="text-gray-600 text-center">Realizamos una exhaustiva investigación y redacción de documentos para fortalecer su caso legal.</p>
+                </div>
+    
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <div class="flex items-center justify-center w-16 h-16 bg-black text-white rounded-full mb-4 mx-auto">
+                        <img src="src/img/apoyo.png" alt="" class="w-2/3 h-2/3">
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Servicios de Apoyo</h3>
+                    <p class="text-gray-600 text-center">Brindamos una gama de servicios de apoyo legal para satisfacer todas las necesidades de nuestros clientes.</p>
+                </div>
+    
+            </div>
         </div>
     </section>
 

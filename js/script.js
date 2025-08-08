@@ -38,6 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         carouselItems[currentItem].classList.add('active');
     }
 
-    setInterval(showNextItem, 5000); // 5 segundos
+    setInterval(showNextItem, 7000); // 5 segundos
 
 });

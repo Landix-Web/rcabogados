@@ -2,21 +2,54 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@theme {
+/* Definición del color gold en la raíz para Tailwind */
+:root {
     --color-gold: #D4AF37;
-}
+  }
+  
+  /* Estilos de la barra de navegación */
+  .text-gold:hover {
+    color: var(--color-gold);
+  }
+
+  .text{
+    color: white;
+  }
+
+  .text:hover{
+    color: #D4AF37 !important;
+  }
+
+  /* Estilo para la línea animada */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; /* Posiciona la línea debajo del texto */
+    left: 0;
+    width: 0; /* Ancho inicial de cero */
+    height: 2px; /* Grosor de la línea */
+    background-color: var(--color-gold);
+    transition: width 0.3s ease-out; /* Transición para la animación */
+  }
+  
+  /* Animación de la línea al pasar el mouse */
+  .nav-link:hover::after {
+    width: 100%; /* El ancho se expande al 100% */
+  }
 
 .carousel-item {
     position: absolute;
     inset: 0;
     background-size: cover;
     background-position: center;
-    animation: zoomOut 6s infinite alternate;
+    animation: zoomOut 7s infinite alternate;
 }
 
-.bg-hero-1 { background-image: url('img/hero1.jpg'); }
-.bg-hero-2 { background-image: url('img/hero2.jpg'); }
-.bg-hero-3 { background-image: url('img/hero3.jpg'); }
+.bg-hero-1 { background-image: url('img/hero1.png'); }
+.bg-hero-2 { background-image: url('img/hero2.png'); }
+.bg-hero-3 { background-image: url('img/hero3.png'); }
+.bg-hero-4 { background-image: url('img/hero4.png'); }
+.bg-hero-5 { background-image: url('img/hero5.png'); }
 
 @keyframes zoomOut {
     from {
@@ -39,14 +72,14 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    transition: all 0.3s ease; 
+    transition: all 0.5s ease; 
     overflow: hidden; 
 }
 
 /* Estilo del ícono de WhatsApp */
 .whatsapp-btn img {
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     transition: transform 0.3s ease;
 }
 
@@ -92,3 +125,4 @@ textarea {
 .carousel-item.active {
     opacity: 1;
 }
+
