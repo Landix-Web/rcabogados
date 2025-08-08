@@ -126,3 +126,37 @@ textarea {
     opacity: 1;
 }
 
+/* Estilo base para los iconos sociales */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px; /* Tamaño del icono */
+    height: 48px;
+    border-radius: 50%;
+    color: #fff; /* Color inicial blanco */
+    background-color: #333; /* Fondo oscuro */
+    transition: all 0.3s ease; /* Transición para el hover */
+}
+
+.social-icon svg {
+    stroke: currentColor;
+}
+
+/* Efecto de hover para Facebook */
+.social-icon.facebook-icon:hover {
+    background-color: #3b5998; /* Color de Facebook */
+    transform: scale(1.1);
+}
+
+/* Efecto de hover para Instagram */
+.social-icon.instagram-icon:hover {
+    background-color: #E1306C; /* Color de Instagram */
+    transform: scale(1.1);
+}
+
+/* Efecto de hover para WhatsApp */
+.social-icon.whatsapp-icon:hover {
+    background-color: #25D366; /* Color de WhatsApp */
+    transform: scale(1.1);
+}
