@@ -2,6 +2,16 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Definición del color gold en la raíz para Tailwind */
 :root {
     --color-gold: #D4AF37;
@@ -14,6 +24,7 @@
 
   .text{
     color: white;
+    transition: color 0.3s ease;
   }
 
   .text:hover{
@@ -24,17 +35,17 @@
   .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -4px; /* Posiciona la línea debajo del texto */
+    bottom: -4px; 
     left: 0;
-    width: 0; /* Ancho inicial de cero */
-    height: 2px; /* Grosor de la línea */
+    width: 0; 
+    height: 2px; 
     background-color: var(--color-gold);
-    transition: width 0.3s ease-out; /* Transición para la animación */
+    transition: width 0.3s ease-out, background-color 0.3s ease;
   }
   
   /* Animación de la línea al pasar el mouse */
   .nav-link:hover::after {
-    width: 100%; /* El ancho se expande al 100% */
+    width: 100%;
   }
 
 .carousel-item {
@@ -43,6 +54,7 @@
     background-size: cover;
     background-position: center;
     animation: zoomOut 7s infinite alternate;
+    background-attachment: fixed;
 }
 
 .bg-hero-1 { background-image: url('img/hero1.png'); }
@@ -66,7 +78,7 @@
     right: 20px;
     bottom: 20px; 
     z-index: 999; 
-    background-color: #000; 
+    background-color: #25D366; 
     border-radius: 50px;
     padding: 10px;
     display: flex;
@@ -131,12 +143,12 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 48px; /* Tamaño del icono */
-    height: 48px;
+    width: 25px; 
+    height: 25px;
     border-radius: 50%;
-    color: #fff; /* Color inicial blanco */
-    background-color: #333; /* Fondo oscuro */
-    transition: all 0.3s ease; /* Transición para el hover */
+    color: #fff; 
+    background-color: #333; 
+    transition: all 0.3s ease; 
 }
 
 .social-icon svg {
@@ -145,18 +157,164 @@ textarea {
 
 /* Efecto de hover para Facebook */
 .social-icon.facebook-icon:hover {
-    background-color: #3b5998; /* Color de Facebook */
+    background-color: #3b5998; 
     transform: scale(1.1);
 }
 
 /* Efecto de hover para Instagram */
 .social-icon.instagram-icon:hover {
-    background-color: #E1306C; /* Color de Instagram */
+    background-color: #E1306C; 
     transform: scale(1.1);
 }
 
 /* Efecto de hover para WhatsApp */
 .social-icon.whatsapp-icon:hover {
-    background-color: #25D366; /* Color de WhatsApp */
+    background-color: #25D366; 
     transform: scale(1.1);
 }
+
+    /* Estilos personalizados para la sección */
+.bg-gold {
+    background-color: #D4AF37;
+}
+
+.text-gold-500 {
+    color: #D4AF37;
+}
+
+.bg-black-gradient {
+    position: relative;
+}
+.bg-black-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0.8) 0%, transparent 70%);
+    z-index: 1; /* Asegura que la capa esté por encima de las imágenes */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#inicio .container {
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.bg-gray-100 {
+    background-color: #F8F9FA;
+
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.hover\:shadow-xl:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+
+.service-card {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    transform: translateY(-5px);
+}
+
+
+.parallax-bg {
+    background-image: url('img/sec.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+    .parallax-bg {
+        background-attachment: scroll;
+    }
+}
+
+.b-text {
+    color: #D4AF37;
+}
+
+.shadow-text {
+    text-shadow: #000000 2px 2px;
+}
+
+
+.watermark-bg {
+    position: relative;
+}
+    
+.watermark-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/logo_agua.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.09;
+}
+
+.oculto {
+    opacity: 0;
+    transform: translateY(40px); 
+    transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.oculto-l {
+    opacity: 0;
+    transform: translateX(40px); 
+    transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+
+.visible-l {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.bg-sky {
+    background-color:oklch(74.6% 0.16 232.661);
+}
+
+.a-hover:hover {
+    background-color: #ffffff;
+    color: #D4AF37;
+    border: 2px solid #D4AF37
+}
+
+.bg-c{
+    background-image: url('img/contact.png');
+    background-size: cover;
+    background-position: bottom;
+    repeat: no-repeat;
+}
+

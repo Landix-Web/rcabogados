@@ -1,0 +1,237 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Definición del color gold en la raíz para Tailwind */
+:root {
+    --color-gold: #D4AF37;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    background-image: url('img/fondo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+main {
+    flex-grow: 1;
+}
+  /* Estilos de la barra de navegación */
+  .text-gold:hover {
+    color: var(--color-gold);
+  }
+
+  .text{
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+  }
+
+  .text-menu{
+    color: white;
+    transition: color 0.3s ease;
+  }
+
+  .text-menu:hover{
+    color: #D4AF37 !important;
+  }
+
+  .text:hover{
+    color: #D4AF37 !important;
+  }
+
+  /* Estilo para la línea animada */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; 
+    left: 0;
+    width: 0; 
+    height: 2px; 
+    background-color: var(--color-gold);
+    transition: width 0.3s ease-out, background-color 0.3s ease;
+  }
+  
+  /* Animación de la línea al pasar el mouse */
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+
+/* Estilo base para los iconos sociales */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px; 
+    height: 25px;
+    border-radius: 50%;
+    color: #fff; 
+    background-color: #333; 
+    transition: all 0.3s ease; 
+}
+
+.social-icon svg {
+    stroke: currentColor;
+}
+
+/* Efecto de hover para Facebook */
+.social-icon.facebook-icon:hover {
+    background-color: #3b5998; 
+    transform: scale(1.1);
+}
+
+/* Efecto de hover para Instagram */
+.social-icon.instagram-icon:hover {
+    background-color: #E1306C; 
+    transform: scale(1.1);
+}
+
+/* Efecto de hover para WhatsApp */
+.social-icon.whatsapp-icon:hover {
+    background-color: #25D366; 
+    transform: scale(1.1);
+}
+
+.parallax-bg {
+    background-image: url('../img/sec.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+
+/* Estilo del contenedor del botón flotante */
+.whatsapp-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px; 
+  z-index: 999; 
+  background-color: #25D366; 
+  border-radius: 50px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.5s ease; 
+  overflow: hidden; 
+}
+
+/* Estilo del ícono de WhatsApp */
+.whatsapp-btn img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+
+/* Estilo del texto "Contáctanos" */
+.whatsapp-text {
+  color: #fff;
+  white-space: nowrap; 
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-right: 0;
+  transition: margin-right 0.3s ease;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+/* Efecto al pasar el mouse */
+.whatsapp-btn:hover {
+  padding: 10px 20px; 
+}
+
+.whatsapp-btn:hover .whatsapp-text {
+  opacity: 1;
+  width: auto;
+  margin-right: 10px; 
+}
+
+.bg-black-gradient {
+  position: relative;
+}
+.bg-black-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.8) 0%, transparent 70%);
+  z-index: 1; /* Asegura que la capa esté por encima de las imágenes */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+#inicio .container {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.bg-gray-100 {
+  background-color: #F8F9FA;
+
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.hover\:shadow-xl:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+
+.service-card {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  transform: translateY(-5px);
+}
+
+.oculto {
+  opacity: 0;
+  transform: translateY(40px); 
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.oculto-l {
+  opacity: 0;
+  transform: translateX(40px); 
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+
+.visible-l {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+

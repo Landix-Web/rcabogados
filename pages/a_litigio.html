@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derecho Familiar - Ruiz Castillo Abogados</title>
+    <link rel="shortcut icon" href="../src/img/logo.ico" type="image/x-icon">
+    <link rel="icon" href="src/img/logo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/pages.css">
+</head>
+<body class="bg-gray-50 font-sans leading-normal tracking-normal">
+    <nav id="navbar" class="bg-black fixed w-full top-0 z-50 transition-colors duration-300">
+        <div class="container mx-auto flex items-center justify-between px-4 md:px-8">
+            <a href="../index.html" class="text-xl font-semibold text-gray-800">
+                <img src="../src/img/logo_horizontal.png" alt="Logo Ruiz Castillo Abogados" class="h-24 w-auto">
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="../index.html" class="text hover:text-gold transition-colors duration-300 relative nav-link">Inicio</a>
+                <a href="../index.html#area-practica" class="text hover:text-gold transition-colors duration-300 relative nav-link">Áreas de práctica</a>
+                <a href="../index.html#servicios" class="text hover:text-gold transition-colors duration-300 relative nav-link">Servicios</a>
+                <a href="../index.html#contacto" class="text hover:text-gold transition-colors duration-300 relative nav-link">Contacto</a>
+                
+                <div class="h-6 w-px bg-gray-400"></div>
+    
+                <div class="social-icons flex space-x-4">
+                    <a href="https://www.facebook.com/ruizcastilloabogados" class="social-icon facebook-icon" target="_blank">
+                        <img src="../src/img/facebook.png" alt="" class="w-2/3 h-2/3">
+                    </a>
+                    <a href="https://www.instagram.com/ruizcastilloabogados/" class="social-icon instagram-icon" target="_blank">
+                        <img src="../src/img/instagram.png" alt="" class="w-2/3 h-2/3">
+                    </a>
+                    <a href="https://wa.me/526311954904" class="social-icon whatsapp-icon flex justify-center items-center" target="_blank">
+                        <img src="../src/img/whatsapp.png" alt="" class="w-2/3 h-2/3">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path id="menu-open" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2z"></path>
+                        <path id="menu-close" class="hidden" fill-rule="evenodd" d="M6.293 6.293a1 1 0 0 1 1.414 0L12 10.586l4.293-4.293a1 1 0 1 1 1.414 1.414L13.414 12l4.293 4.293a1 1 0 0 1-1.414 1.414L12 13.414l-4.293 4.293a1 1 0 0 1-1.414-1.414L10.586 12 6.293 7.707a1 1 0 0 1 0-1.414z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden bg-black shadow-md absolute top-full left-0 w-full z-40">
+            <div class="py-4 px-4 flex flex-col space-y-3">
+                <a href="../index.html#inicio" class="text-menu hover:text-gold transition-colors duration-300 block">Inicio</a>
+                <a href="../index.html#area-practica" class="text-menu hover:text-gold transition-colors duration-300 block">Áreas de práctica</a>
+                <a href="../index.html#servicios" class="text-menu hover:text-gold transition-colors duration-300 block">Servicios</a>
+                <a href="../index.html#contacto" class="text-menu hover:text-gold transition-colors duration-300 block">Contacto</a>
+                <div class="social-icons flex space-x-4 justify-center mt-4">
+                    <a href="https://www.facebook.com/ruizcastilloabogados" class="social-icon facebook-icon" target="_blank">
+                        <img src="../src/img/facebook.png" alt="" class="w-2/3 h-2/3">
+                    </a>
+                    <a href="https://www.instagram.com/ruizcastilloabogados/" class="social-icon instagram-icon" target="_blank">
+                        <img src="../src/img/instagram.png" alt="" class="w-2/3 h-2/3">
+                    </a>
+                    <a href="https://wa.me/526311954904" class="social-icon whatsapp-icon flex justify-center items-center" target="_blank">
+                        <img src="../src/img/whatsapp.png" alt="" class="w-2/3 h-2/3">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <a href="https://wa.me/526311954904" class="whatsapp-btn" target="_blank">
+        <img src="../src/img/whatsapp.png" alt="WhatsApp" class="h-2/3 w-2/3 justify-center items-center">
+        <span class="whatsapp-text"> Contáctanos</span>
+    </a>
+
+    <main class="pt-24 pb-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-4 mt-8">Servicio de apoyo al litigio</h1>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto text-center">
+                Ofrecemos asistencia estratégica y operativa a abogados y despachos, mejorando la
+                eficiencia y las probabilidades de éxito en cada caso. Nuestro apoyo se centra en la
+                organización, análisis y presentación de información legal.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="hidden md:block">
+                    <img src="../src/img/alitigio.png" alt="Imagen de referencia" class="w-full rounded-lg shadow-md">
+                </div>
+            
+                <div>
+                    <div class="grid grid-cols-1 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Análisis de Casos</h3>
+                            <p class="text-gray-600">Evaluación profunda de la evidencia y los precedentes para una estrategia sólida.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <h3 class="text-xl font-semibold text-gray-800">Preparación de Expedientes</h3>
+                            <p class="text-gray-600">Organización y digitalización de documentos clave para una gestión eficiente.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <h3 class="text-xl font-semibold text-gray-800">Asistencia en Audiencias</h3>
+                            <p class="text-gray-600">Soporte logístico y administrativo durante procedimientos judiciales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white py-4 text-center flex justify-center items-end">
+        <p>&copy; 2025 Ruiz Castillo Abogados. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
