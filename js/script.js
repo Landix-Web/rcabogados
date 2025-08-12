@@ -70,34 +70,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-     // Selecciona todos los elementos con la clase "animar-en-scroll"
-       const elementosAnimadosl = document.querySelectorAll('.left-en-scroll');
-
-       // Opciones para el Intersection Observer
-       const opcionesObservadorl = {
-           root: null, // El viewport (la ventana del navegador) es el área de detección
-           rootMargin: '0px',
-           threshold: 0.5 // El 50% del elemento debe estar visible para que se active
-       };
-   
-       // Callback que se ejecuta cuando el elemento entra o sale de la vista
-       const callbackObservadorl = (entries, observerl) => {
-           entries.forEach(entry => {
-               if (entry.isIntersecting) {
-                   // Si el elemento es visible, añade la clase "visible" y deja de observarlo
-                   entry.target.classList.add('visible-l');
-                   observerl.unobserve(entry.target);
-               }
-           });
-       };
-   
-       // Crea la instancia del Intersection Observer
-       const observerl = new IntersectionObserver(callbackObservadorl, opcionesObservadorl);
-   
-       // Itera sobre los elementos y pídele al observador que los vigile
-       elementosAnimadosl.forEach(elemento => {
-           observerl.observel(elemento);
-       });
-
 });
 

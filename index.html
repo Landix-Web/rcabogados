@@ -264,6 +264,16 @@
                     </p>
                 </div>
             </div>
+
+            <div class="service-card p-8 bg-gray-800 rounded-xl shadow-lg transition-transform duration-500 hover:bg-gray-700 relative overflow-hidden group oculto animar-en-scroll">
+                <div class="absolute inset-0 bg-gold opacity-10 blur-xl group-hover:opacity-20 transition-opacity duration-500"></div>
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold mb-4 text-gold-500">Descubre más servicios</h3>
+                    <div class="flex justify-center mt-4">
+                        <a href="https://wa.me/526311954904" class="a-hover inline-block bg-black hover:bg-white text-white hover:text-black font-bold py-2 px-4 rounded-full transition-colors duration-300 oculto animar-en-scroll">Consultar</a>
+                    </div>
+                </div>
+            </div>
         </div>
         
     </div>
@@ -345,25 +355,38 @@
                     <p class="text-gray-600 mb-2">Email: ruizcastilloabogadoss@gmail.com</p>
                     <p class="text-gray-600 mb-2">Horario: Lunes a Viernes de 9am - 4pm | Sábado de 9am - 1pm</p>
 
-                    <form id="contact-form" action="https://formsubmit.co/7711aa67fa328d8cafdb5c623e458a95" method="POST" class="mt-6 ">
+                    <form id="contact-form" action="https://formsubmit.co/soporte.landix@gmail.com" method="POST" target="_blank" class="mt-6 ">
                         <div class="mb-4">
-                            <input type="text" name="Nombre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Nombre" required>
+                            <input type="text" name="Nombre" id="nombre-field" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Nombre" required>
                         </div>
                         <div class="mb-4">
-                            <input type="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Email" required>
+                            <input type="email" name="Correo electrónico" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Email" required>
                         </div>
                         <div class="mb-4">
-                            <input type="tel" name="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Teléfono" required>
+                            <input type="tel" name="Teléfono" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Teléfono" required>
                         </div>
                         <div class="mb-4">
-                            <textarea name="message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-64" rows="4"  placeholder="Tu Mensaje" required></textarea>
+                            <textarea name="Mensaje" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-64" rows="4" placeholder="Tu Mensaje" required></textarea>
                         </div>
-                        <button type="submit" class="bg-black hover:bg-white text-white hove:text-black font-bold py-2 px-4 rounded focus:outline-black focus:shadow-outline a-hover ">Enviar Mensaje</button>
+                        <button type="submit" class="bg-black hover:bg-white text-white hove:text-black font-bold py-2 px-4 rounded focus:outline-black focus:shadow-outline a-hover">Enviar Mensaje</button>
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+                        <input type="hidden" name="_subject" id="subject-field">
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+       
+        document.getElementById('contact-form').addEventListener('submit', function() {
+            const nombre = document.getElementById('nombre-field').value;
+            const now = new Date();
+            const formattedDate = now.toLocaleString('es-ES', { dateStyle: 'short', timeStyle: 'short' });
+            
+            document.getElementById('subject-field').value = `Nuevo mensaje de ${nombre} - ${formattedDate}`;
+        });
+    </script>
 
     <footer class="bg-black text-white py-4 text-center">
         <p>&copy; 2025 Ruiz Castillo Abogados. Todos los derechos reservados.</p>

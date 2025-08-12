@@ -234,4 +234,8 @@ main {
   transform: translateX(0);
 }
 
+.bg {
+  background-color: black;
+}
+
 
