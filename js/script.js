@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const opcionesObservador = {
         root: null, // El viewport (la ventana del navegador) es el área de detección
         rootMargin: '0px',
-        threshold: 0.5 // El 50% del elemento debe estar visible para que se active
+        threshold: 0.2 // El 50% del elemento debe estar visible para que se active
     };
 
     // Callback que se ejecuta cuando el elemento entra o sale de la vista
